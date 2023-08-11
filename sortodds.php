@@ -157,18 +157,21 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     if(!in_my_array($qplTrio, $qplTrios)) $qplTrios[] = $qplTrio;
         
     $allWinsValues = [];
-    $NOPLACE = true;
+    $qqpls = [];
     $WINSText = "[";
     $someCounter = 0;
     $someLength = count($wins);
     foreach($wins as $winsItem){
-        if(count($winsItem) == 2) $NOPLACE = false;
+        if(count($winsItem) == 2) {
+            $qqpls[] = $winsItem;
+        }
         $allWinsValues = array_values(array_unique(array_merge($allWinsValues, $winsItem)));
         $WINSText .= "[" . implode(", ", $winsItem) . "]";
         $someCounter ++;
         if($someCounter < $someLength) $WINSText .= ", ";
     }
     $WINSText .= "]";
+    $NOPLACE = ( count($qqpls) !== 1 );
 
     //1. Sort allWinsValues by odds
     $winssOdds = [];
@@ -281,8 +284,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
     $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
     $racetext .= "\t\t'Favorite' =>  '" . $first1. "',\n";
-    if(!$NOPLACE){
+    if(!$NOPLACE && !empty($surePlace)){
         $racetext .= "\t\t'Place'    =>  '" . implode(", ", $surePlace). "',\n";
+        $racetext .= "\t\t'QQPL'      =>  '" . implode(", ", $qqpls[0]). "',\n";
     }
     $racetext .= "\t\t'Red QPL values'      =>  '" . implode(", ", $redQplValues). "',\n";
     $racetext .= "\t\t'Black QPL values'    =>  '" . implode(", ", $blackQplValues). "',\n";
