@@ -296,7 +296,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         $racetext .= "\t\t'QQPL'      =>  '" . implode(", ", $qqpls[0]). "',\n";
     }
     if(!empty($places)){
-        $racetext .= "\t\t'places'    =>  '" . implode(", ", $places). "',\n";
+        $racetext .= "\t\t'places'    =>  [" . implode(", ", $places). "],\n";
     }
     $racetext .= "\t\t'Red QPL values'      =>  '" . implode(", ", $redQplValues). "',\n";
     $racetext .= "\t\t'Black QPL values'    =>  '" . implode(", ", $blackQplValues). "',\n";
