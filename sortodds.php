@@ -282,10 +282,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if(in_array($candidate, $blacks) && in_array($first1, $reds)) unset($surePlace[$key]);
         if(in_array($candidate, $reds) && in_array($first1, $blacks)) unset($surePlace[$key]);
     }
-
-    foreach($surePlace as $key => $candidate){
-        if(!in_array($candidate, $places)) $places[] = $candidate;
-    }
     
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
@@ -294,6 +290,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     if(!$NOPLACE && !empty($surePlace)){
         $racetext .= "\t\t'Place'    =>  '" . implode(", ", $surePlace). "',\n";
         $racetext .= "\t\t'QQPL'      =>  '" . implode(", ", $qqpls[0]). "',\n";
+        foreach($surePlace as $key => $candidate){
+            if(!in_array($candidate, $places)) $places[] = $candidate;
+        }
     }
     if(!empty($places)){
         $racetext .= "\t\t'places'    =>  [" . implode(", ", $places). "],\n";
@@ -305,6 +304,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     unset($oldWINS);
     unset($oldQPLTrio);
     unset($NOPLACE);
+    unset($historicPlaces);
     $outtext .= $racetext;
 }
 
