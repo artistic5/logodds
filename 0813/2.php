@@ -39,23 +39,4 @@ return [
 		'Bet' =>  '',
 		'PLACE' =>  '8',
 	],
-	'6' => [
-		/**
-		Race 6
-		*/
-		'wins' =>  [] ,
-		'qpl/trio' =>  [] ,
-		'inters' =>  [] ,
-		'Favorite' =>  '9',
-		'Sure Place'    =>  '',
-		'All Wins values'    =>  '',
-		'Place values'    =>  '',
-		'Red QPL values'      =>  '',
-		'Black QPL values'    =>  '',
-		'Inter Inters' =>  '',
-		'Inter QPL' =>  '',
-		'I' =>  '',
-		'Bet' =>  '',
-		'PLACE' =>  '9',
-	],
 ];
