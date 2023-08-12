@@ -283,7 +283,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if(in_array($candidate, $reds) && in_array($first1, $blacks)) unset($surePlace[$key]);
     }
 
-    if(!in_my_array($surePlace, $places)) $places = array_merge($places, $surePlace);
+    foreach($surePlace as $key => $candidate){
+        if(!in_array($candidate, $places)) $places[] = $candidate;
+    }
     
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
