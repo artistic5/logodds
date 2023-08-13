@@ -8,7 +8,7 @@ return [
 		'wins' =>  [] ,
 		'qpl/trio' =>  [] ,
 		'inters' =>  [] ,
-		'Favorite' =>  '14',
+		'Favorite' =>  '12',
 		'Sure Place'    =>  '',
 		'All Wins values'    =>  '',
 		'Place values'    =>  '',
@@ -18,7 +18,7 @@ return [
 		'Inter QPL' =>  '',
 		'I' =>  '',
 		'Bet' =>  '',
-		'PLACE' =>  '14',
+		'PLACE' =>  '12',
 	],
 	'4' => [
 		/**
@@ -27,7 +27,7 @@ return [
 		'wins' =>  [] ,
 		'qpl/trio' =>  [] ,
 		'inters' =>  [] ,
-		'Favorite' =>  '8',
+		'Favorite' =>  '5',
 		'Sure Place'    =>  '',
 		'All Wins values'    =>  '',
 		'Place values'    =>  '',
@@ -37,6 +37,44 @@ return [
 		'Inter QPL' =>  '',
 		'I' =>  '',
 		'Bet' =>  '',
-		'PLACE' =>  '8',
+		'PLACE' =>  '5',
+	],
+	'6' => [
+		/**
+		Race 6
+		*/
+		'wins' =>  [] ,
+		'qpl/trio' =>  [] ,
+		'inters' =>  [] ,
+		'Favorite' =>  '1',
+		'Sure Place'    =>  '',
+		'All Wins values'    =>  '',
+		'Place values'    =>  '',
+		'Red QPL values'      =>  '',
+		'Black QPL values'    =>  '',
+		'Inter Inters' =>  '',
+		'Inter QPL' =>  '',
+		'I' =>  '',
+		'Bet' =>  '',
+		'PLACE' =>  '1',
+	],
+	'7' => [
+		/**
+		Race 7
+		*/
+		'wins' =>  [] ,
+		'qpl/trio' =>  [] ,
+		'inters' =>  [] ,
+		'Favorite' =>  '2',
+		'Sure Place'    =>  '',
+		'All Wins values'    =>  '',
+		'Place values'    =>  '',
+		'Red QPL values'      =>  '',
+		'Black QPL values'    =>  '',
+		'Inter Inters' =>  '',
+		'Inter QPL' =>  '',
+		'I' =>  '',
+		'Bet' =>  '',
+		'PLACE' =>  '2',
 	],
 ];
