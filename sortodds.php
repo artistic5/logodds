@@ -303,6 +303,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t],\n";
     unset($oldWINS);
     unset($oldQPLTrio);
+    unset($oldINTERS);
     unset($NOPLACE);
     unset($historicPlaces);
     $outtext .= $racetext;
