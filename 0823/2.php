@@ -8,7 +8,7 @@ return [
 		'wins' =>  [] ,
 		'qpl/trio' =>  [] ,
 		'inters' =>  [] ,
-		'Favorite' =>  '17',
+		'Favorite' =>  '8',
 		'Sure Place'    =>  '',
 		'All Wins values'    =>  '',
 		'Place values'    =>  '',
