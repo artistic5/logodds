@@ -8,9 +8,9 @@ return [
 		'wins' =>  [] ,
 		'qpl/trio' =>  [[11, 15, 4, 9, 1], [11, 15, 2, 9, 1]] ,
 		'inters' =>  [[11, 15, 4, 9, 1], [11, 15, 2, 9, 1]] ,
-		'Favorite' =>  '11',
+		'Favorite' =>  '15',
 		'Red QPL values'      =>  '9, 1',
-		'Black QPL values'    =>  '11, 15, 2, 4',
+		'Black QPL values'    =>  '15, 11, 2, 4',
 		'Inter QPL' =>  '11, 15, 9, 1',
 	],
 	'3' => [
