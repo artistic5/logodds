@@ -80,7 +80,7 @@ return [
 		'wins' =>  [] ,
 		'qpl/trio' =>  [] ,
 		'inters' =>  [] ,
-		'Favorite' =>  '13',
+		'Favorite' =>  '2',
 		'Sure Place'    =>  '',
 		'All Wins values'    =>  '',
 		'Place values'    =>  '',

@@ -56,7 +56,7 @@ return [
 		'wins' =>  [] ,
 		'qpl/trio' =>  [[2, 13, 15, 9, 7], [9, 7, 1, 13, 15]] ,
 		'inters' =>  [[2, 13, 15, 9, 7], [9, 7, 1, 13, 15]] ,
-		'Favorite' =>  '13',
+		'Favorite' =>  '2',
 		'Red QPL values'      =>  '9, 7, 1',
 		'Black QPL values'    =>  '13, 15, 2',
 		'Inter QPL' =>  '13, 15, 9, 7',
