@@ -64,14 +64,14 @@ return [
 		'inters' =>  [[1, 12, 6]] ,
 		'Favorite' =>  '2',
 		'Sure Place'    =>  '6',
-		'All Wins values'    =>  '7, 2',
+		'All Wins values'    =>  '2, 7',
 		'Place values'    =>  '1, 12, 6',
 		'Red QPL values'      =>  '7, 1, 12',
 		'Black QPL values'    =>  '2, 6',
 		'Inter Inters' =>  '1, 12, 6',
 		'Inter QPL' =>  '1, 12, 6, 7, 2',
 		'I' =>  '',
-		'Bet' =>  '7, 2',
+		'Bet' =>  '2, 7',
 	],
 	'6' => [
 		/**
