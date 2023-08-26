@@ -21,7 +21,8 @@ $outtext .= "return [\n";
 foreach($oneDate as $raceNumber => $oneRaceDate){
     if(isset($oneRaceDate["Place"])){
         $twoRaceData = $twoDate[$raceNumber];
-        $placeBet = $twoRaceData["Sure Place"];
+        if(!empty($twoRaceData["Sure Place"])) $placeBet = $twoRaceData["Sure Place"];
+        else $placeBet = $oneRaceDate["Place"];
         $qplBet = $oneRaceDate["QQPL"];
         $racetext = "\t'$raceNumber' => [\n";
         $racetext .= "\t\t/**\n";
