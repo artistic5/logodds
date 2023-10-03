@@ -8,10 +8,10 @@ return [
 		'wins' =>  [[11], [2]] ,
 		'qpl/trio' =>  [[1, 3, 6, 7, 8], [3, 1, 7, 6, 11], [1, 3, 7, 6, 2]] ,
 		'inters' =>  [[1, 3, 6, 7, 8], [3, 1, 7, 6]] ,
-		'Favorite' =>  '1',
+		'Favorite' =>  '3',
 		'Sure Place'    =>  '6',
-		'Red QPL values'      =>  '1, 3, 7',
-		'Black QPL values'    =>  '6, 11, 2, 8',
+		'Red QPL values'      =>  '3, 1, 7',
+		'Black QPL values'    =>  '6, 2, 11, 8',
 		'Inter QPL' =>  '1, 3, 6, 7',
 	],
 	'2' => [
@@ -63,7 +63,7 @@ return [
 		'Favorite' =>  '1',
 		'places'    =>  [4],
 		'Red QPL values'      =>  '1, 3, 7',
-		'Black QPL values'    =>  '11, 4, 2',
+		'Black QPL values'    =>  '4, 11, 2',
 		'Inter QPL' =>  '4, 1, 3, 11',
 	],
 	'8' => [
