@@ -82,7 +82,7 @@ return [
 		'inters' =>  [[4, 1, 3], [1, 3, 12]] ,
 		'Favorite' =>  '1',
 		'Sure Place'    =>  '',
-		'All Wins values'    =>  '11, 4, 2',
+		'All Wins values'    =>  '11, 2, 4',
 		'Place values'    =>  '1, 3, 12',
 		'Red QPL values'      =>  '1, 3, 12',
 		'Black QPL values'    =>  '4, 11, 2',
