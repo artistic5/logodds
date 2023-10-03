@@ -74,7 +74,7 @@ return [
 		'inters' =>  [[1, 12, 4, 8], [1, 12, 4], [1, 12, 4, 6], [1, 4]] ,
 		'Favorite' =>  '9',
 		'Sure Place'    =>  '4',
-		'Red QPL values'      =>  '9, 1, 5, 12',
+		'Red QPL values'      =>  '9, 1, 12, 5',
 		'Black QPL values'    =>  '4, 8, 6',
 		'Inter QPL' =>  '1, 4, 9',
 	],
