@@ -11,7 +11,7 @@ return [
 		'Favorite' =>  '3',
 		'Sure Place'    =>  '6',
 		'Red QPL values'      =>  '3, 1, 7',
-		'Black QPL values'    =>  '6, 8, 11, 2',
+		'Black QPL values'    =>  '6, 11, 2, 8',
 		'Inter QPL' =>  '1, 3, 6, 7',
 	],
 	'2' => [
