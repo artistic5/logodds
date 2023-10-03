@@ -28,14 +28,14 @@ return [
 		'inters' =>  [[3, 1, 10], [3, 5, 10]] ,
 		'Favorite' =>  '3',
 		'Sure Place'    =>  '',
-		'All Wins values'    =>  '8, 7',
+		'All Wins values'    =>  '7, 8',
 		'Place values'    =>  '3, 1, 10, 5',
 		'Red QPL values'      =>  '3, 7, 5, 1',
 		'Black QPL values'    =>  '10, 8',
 		'Inter Inters' =>  '3, 10',
 		'Inter QPL' =>  '3, 10, 7, 8',
 		'I' =>  '3, 10',
-		'Bet' =>  '8, 7',
+		'Bet' =>  '7, 8',
 	],
 	'4' => [
 		/**
