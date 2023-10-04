@@ -66,7 +66,7 @@ return [
 		'Sure Place'    =>  '',
 		'All Wins values'    =>  '1, 8',
 		'Place values'    =>  '7, 5, 10',
-		'Red QPL values'      =>  '1, 5, 7',
+		'Red QPL values'      =>  '1, 7, 5',
 		'Black QPL values'    =>  '10, 8',
 		'Inter Inters' =>  '7, 5, 10',
 		'Inter QPL' =>  '7, 5, 10, 1, 8',
