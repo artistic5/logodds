@@ -31,7 +31,7 @@ return [
 		'All Wins values'    =>  '8, 7',
 		'Place values'    =>  '3, 1, 10, 5',
 		'Red QPL values'      =>  '3, 7, 5, 1',
-		'Black QPL values'    =>  '10, 8',
+		'Black QPL values'    =>  '8, 10',
 		'Inter Inters' =>  '3, 10',
 		'Inter QPL' =>  '3, 10, 7, 8',
 		'I' =>  '3, 10',
