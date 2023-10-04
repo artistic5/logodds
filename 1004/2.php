@@ -26,7 +26,7 @@ return [
 		'wins' =>  [[7, 8]] ,
 		'qpl/trio' =>  [[3, 1, 10, 7, 8], [3, 5, 10, 7, 8]] ,
 		'inters' =>  [[3, 1, 10], [3, 5, 10]] ,
-		'Favorite' =>  '3',
+		'Favorite' =>  '10',
 		'Sure Place'    =>  '',
 		'All Wins values'    =>  '8, 7',
 		'Place values'    =>  '3, 1, 10, 5',
@@ -34,7 +34,7 @@ return [
 		'Black QPL values'    =>  '10, 8',
 		'Inter Inters' =>  '3, 10',
 		'Inter QPL' =>  '3, 10, 7, 8',
-		'I' =>  '3, 10',
+		'I' =>  '10, 3',
 		'Bet' =>  '8, 7',
 	],
 	'4' => [
