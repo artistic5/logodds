@@ -88,7 +88,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $tmpArray = $probas[$raceNumber];
     $runners = array_keys($tmpArray);
 
-    if(count($runners) < 10) continue;
+    if(count($runners) < 11) continue;
     
     $racetext .= "\t'$raceNumber' => [\n";
     $racetext .= "\t\t/**\n";
@@ -222,11 +222,37 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio'       =>  $QPLText ,\n";
     $racetext .= "\t\t'All QPL values'    =>  '" . implode(", ", $allQplValues).  "',\n";
+    $racetext .= "\t\t'All Runners   '    =>  '" . implode(", ", $runners).  "',\n";
 
     $racetext .= "\t\t'favorite' =>  $first1 ,\n";
 
     $forReference = array_diff($allQplValues, $allWinsValues);
     $weird = array_diff($runners, $allQplValues);
+    $weird = array_values($weird);
+    //1. Find those in allQplValues that have lower odds than weird[0]
+    if(!empty($weird)){
+        $mySet1 = [];
+        foreach($allQplValues as $value){
+            if($allOdds[$raceNumber][$value] >= $allOdds[$raceNumber][$weird[0]]){
+                $mySet1[] = $value;
+            }
+        }
+        if(!empty($mySet1)) $racetext .= "\t\t'Set 1'  =>  '" . implode(", ", $mySet1).  "',\n";
+        if(!empty(array_intersect($mySet1, $forReference)) && count($forReference) > 3 && in_array($first1, $forReference) && $first1 != 1){
+            $racetext .= "\t\t'WP'  =>  '" . $first1 .  "',\n";
+            if(in_array($first1, $forReference)){
+                $racetext .= "\t\t'Win/Qin/Trio'  =>  '" . implode(", ", $forReference) .  "',\n";
+            }
+        }
+    }
+    //2. Find those in weird that have better odds than end($allQplValues)
+    $mySet2 = [];
+    foreach($weird as $value){
+        if($allOdds[$raceNumber][$value] <= $allOdds[$raceNumber][end($allQplValues)]){
+            $mySet2[] = $value;
+        }
+    }
+    if(!empty($mySet2)) $racetext .= "\t\t'Set 2'  =>  '" . implode(", ", $mySet2).  "',\n";
 
     $racetext .= "\t\t'all wins values'  =>  '" . implode(", ", $allWinsValues). " //count wins: " . count($allWinsValues) . "',\n";
     $racetext .= "\t\t'for reference  '  =>  '" . implode(", ", $forReference). " //count ref: " . count($forReference) . "',\n";
