@@ -16,16 +16,29 @@ $outFile = $currentDir . DIRECTORY_SEPARATOR . "bets.php";
 $outtext = "<?php\n\n";
 $outtext .= "return [\n";
 
+$favorites = [];
+
 foreach($oneData as $raceNumber => $oneRaceDate){
-    if(isset($oneRaceDate["WP"])){
-        $racetext = "\t'$raceNumber' => [\n";
-        $racetext .= "\t\t/**\n";
-        $racetext .= "\t\tRace $raceNumber\n";
-        $racetext .= "\t\t*/\n";
-        $racetext .= "\t\t'WP' =>  '" . $oneRaceDate["WP"] . "',\n";
-        $racetext .= "\t],\n";
-        $outtext .= $racetext;
+    $raceFavorite = $oneRaceDate["favorite"];
+    if(!in_array($raceFavorite, $favorites)) $favorites[] = $raceFavorite;
+}
+
+$outtext .= "/** Favorites: " . implode(", ", $favorites) . "*/\n";
+
+foreach($oneData as $raceNumber => $oneRaceDate){
+    $raceFavorite = $oneRaceDate["favorite"];
+    $allWinsValues = explode(", ", $oneRaceDate['All Wins']);
+    $wp = array_intersect($favorites, $allWinsValues);
+    $racetext = "\t'$raceNumber' => [\n";
+    $racetext .= "\t\t/**\n";
+    $racetext .= "\t\tRace $raceNumber\n";
+    $racetext .= "\t\t*/\n";
+    $racetext .= "\t\t'Place' =>  '" . implode(", ", $wp) . "',\n";;
+    if(in_array($raceFavorite, $wp)){
+        $racetext .= "\t\t'Qin/Trio' =>  '" . implode(", ", $allWinsValues) . "',\n";;
     }
+    $racetext .= "\t],\n";
+    $outtext .= $racetext;
 }
 
 $outtext .= "];\n";

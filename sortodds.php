@@ -224,6 +224,8 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'qpl/trio'       =>  $QPLText ,\n";
     $racetext .= "\t\t'All QPL values'    =>  '" . implode(", ", $allQplValues).  "',\n";
     $racetext .= "\t\t'All Runners   '    =>  '" . implode(", ", $runners).  "',\n";
+    $racetext .= "\t\t'favorite'    =>  '" . $first1 .  "',\n";
+    $racetext .= "\t\t'All Wins'    =>  '" . implode(", ", $allWinsValues).  "',\n";
 
     $tce = array_slice($runners, 0, 6);
     $whatever = array_slice($allQplValues, 0, 6);
