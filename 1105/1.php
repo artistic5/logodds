@@ -10,10 +10,15 @@ return [
 		'All Runners   '  =>  '5, 14, 9, 3, 6, 10, 12, 2, 11, 7, 4, 1, 8, 13',
 		'All QPL values'  =>  '5, 14, 9, 3, 6, 10, 2, 11',
 		'All Wins'        =>  '9, 6',
-		//Count(Wins)     =  2,
-		//Count(QPL/Trio) =  3,
+		'Place' =>  '5',
+		'qin/trio' =>  '5, 14, 3, 10, 2, 11',//count:6
+		'WP' =>  '5',
 		'diff1' =>  '',
 		'diff2' =>  '5, 14, 3, 10',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '2',
+		'shit22' =>  '12',
 	],
 	'2' => [
 		/**
@@ -24,10 +29,12 @@ return [
 		'All Runners   '  =>  '7, 2, 8, 6, 3, 1, 5, 9, 11, 10, 12, 4',
 		'All QPL values'  =>  '7, 2, 8, 6, 3, 1, 9',
 		'All Wins'        =>  '7, 8, 2, 6, 9',
-		//Count(Wins)     =  6,
-		//Count(QPL/Trio) =  4,
 		'diff1' =>  '9',
 		'diff2' =>  '3, 1',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '9',
+		'shit22' =>  '5',
 	],
 	'3' => [
 		/**
@@ -38,10 +45,15 @@ return [
 		'All Runners   '  =>  '7, 4, 3, 9, 12, 1, 13, 14, 8, 5, 11, 2, 10, 6',
 		'All QPL values'  =>  '7, 4, 3, 9, 12, 13, 14, 5, 11',
 		'All Wins'        =>  '4, 3, 9, 13',
-		//Count(Wins)     =  3,
-		//Count(QPL/Trio) =  6,
+		'Place' =>  '7',
+		'qin/trio' =>  '7, 12, 14, 5, 11',//count:5
+		'WP' =>  '7',
 		'diff1' =>  '',
 		'diff2' =>  '7, 12',
+		'shit11' =>  '13',
+		'shit12' =>  '1',
+		'shit21' =>  '14',
+		'shit22' =>  '1',
 	],
 	'4' => [
 		/**
@@ -52,10 +64,12 @@ return [
 		'All Runners   '  =>  '10, 7, 9, 3, 6, 1, 8, 14, 5, 4, 12, 11, 2',
 		'All QPL values'  =>  '10, 7, 9, 6, 1, 8, 2',
 		'All Wins'        =>  '7, 9, 1, 8',
-		//Count(Wins)     =  4,
-		//Count(QPL/Trio) =  3,
 		'diff1' =>  '',
 		'diff2' =>  '10, 6',
+		'shit11' =>  '8',
+		'shit12' =>  '3',
+		'shit21' =>  '2',
+		'shit22' =>  '3',
 	],
 	'5' => [
 		/**
@@ -66,10 +80,13 @@ return [
 		'All Runners   '  =>  '7, 8, 6, 1, 11, 4, 10, 3, 9, 2, 5',
 		'All QPL values'  =>  '7, 8, 6, 1, 11, 4, 3, 9',
 		'All Wins'        =>  '7, 8, 11, 9',
-		//Count(Wins)     =  4,
-		//Count(QPL/Trio) =  6,
+		'qin/trio' =>  '6, 1, 4, 3',//count:4
 		'diff1' =>  '9',
 		'diff2' =>  '6, 1, 4',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '3',
+		'shit22' =>  '10',
 	],
 	'6' => [
 		/**
@@ -80,10 +97,14 @@ return [
 		'All Runners   '  =>  '1, 10, 2, 4, 13, 9, 5, 11, 8, 7, 6, 3, 14, 12',
 		'All QPL values'  =>  '1, 10, 2, 4, 13, 9, 5, 8, 14, 3',
 		'All Wins'        =>  '2, 4, 13, 9, 5, 14',
-		//Count(Wins)     =  7,
-		//Count(QPL/Trio) =  7,
+		'qin/trio' =>  '1, 10, 8, 3',//count:4
+		'WP' =>  '1',
 		'diff1' =>  '5, 14',
 		'diff2' =>  '1, 10',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '',
+		'shit22' =>  '',
 	],
 	'8' => [
 		/**
@@ -94,10 +115,14 @@ return [
 		'All Runners   '  =>  '5, 4, 9, 3, 6, 8, 12, 2, 13, 7, 14, 11, 1, 10',
 		'All QPL values'  =>  '5, 4, 9, 3, 6, 8, 2',
 		'All Wins'        =>  '4, 9, 8',
-		//Count(Wins)     =  4,
-		//Count(QPL/Trio) =  4,
+		'qin/trio' =>  '5, 3, 6, 2',//count:4
+		'WP' =>  '5',
 		'diff1' =>  '',
 		'diff2' =>  '5, 3, 6',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '2',
+		'shit22' =>  '12',
 	],
 	'9' => [
 		/**
@@ -108,10 +133,13 @@ return [
 		'All Runners   '  =>  '5, 10, 12, 1, 7, 4, 3, 6, 2, 9, 8, 11',
 		'All QPL values'  =>  '5, 10, 12, 1, 7, 4, 6, 2',
 		'All Wins'        =>  '5, 10, 4, 2',
-		//Count(Wins)     =  4,
-		//Count(QPL/Trio) =  5,
+		'qin/trio' =>  '12, 1, 7, 6',//count:4
 		'diff1' =>  '2',
 		'diff2' =>  '12, 1, 7',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '6',
+		'shit22' =>  '3',
 	],
 	'10' => [
 		/**
@@ -122,9 +150,12 @@ return [
 		'All Runners   '  =>  '6, 7, 4, 5, 11, 1, 12, 8, 10, 2, 3, 14, 9, 13',
 		'All QPL values'  =>  '6, 7, 4, 11, 5, 1, 12, 8, 10, 2',
 		'All Wins'        =>  '6, 7, 1, 2',
-		//Count(Wins)     =  4,
-		//Count(QPL/Trio) =  12,
+		'qin/trio' =>  '4, 11, 5, 12, 8, 10',//count:6
 		'diff1' =>  '2',
 		'diff2' =>  '4, 11, 5',
+		'shit11' =>  '',
+		'shit12' =>  '',
+		'shit21' =>  '',
+		'shit22' =>  '',
 	],
 ];
