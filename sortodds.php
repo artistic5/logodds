@@ -200,11 +200,15 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
 
     $tce1 = array_slice($allQplValues, 0, 6);
     $tce2 = array_slice($runners, 0, 6);
+
+    $diff1 = array_diff($allWinsValues, $tce1);
+    $diff2 = array_diff($tce1, $allWinsValues);
     
-    if(count($wins) >= 5){
-        $racetext .= "\t\t'qin' =>  '" . implode(", ", $allWinsValues) . "',\n";
-        $racetext .= "\t\t'tce' =>  '" . implode(", ", $tce1) . "',\n";
+    if(count($wins) > 2 && count($diff2) >= 4 && in_array($first1, $diff2)){
+        $racetext .= "\t\t'WP' =>  '" . $first1 . "',\n";
     }
+    $racetext .= "\t\t'diff1' =>  '" . implode(", ", $diff1) . "',\n";
+    $racetext .= "\t\t'diff2' =>  '" . implode(", ", $diff2) . "',\n";
     $racetext .= "\t],\n";
     unset($oldWINS);
     unset($oldQPLTrio);
