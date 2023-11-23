@@ -25,23 +25,11 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if(isset($oldData[$raceNumber])){
             $oldRaceData = $oldData[$raceNumber];
             if(isset($oldRaceData['places'])) $oldPlaces = $oldRaceData['places'];
-            if(isset($oldRaceData['WP'])) $oldWPs = $oldRaceData['WP'];
-            if(isset($oldRaceData['Sure Place'])) $oldSures = $oldRaceData['Sure Place'];
-            if(isset($oldRaceData['Also Place'])) $oldSures2 = $oldRaceData['Also Place'];
         }
     }
 
     if(isset($oldPlaces)) $places = explode(", ", $oldPlaces);
     else $places = [];
-
-    if(isset($oldWPs)) $wps = explode(", ", $oldWPs);
-    else $wps = [];
-
-    if(isset($oldSures)) $sures = explode(", ", $oldSures);
-    else $sures = [];
-
-    if(isset($oldSures2)) $sures2 = explode(", ", $oldSures2);
-    else $sures2 = [];
 
     $racetext = "";
     $tmpArray = $allOdds[$raceNumber];
@@ -65,42 +53,37 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if(isset($runners[$pos - 1])) $place[] = $runners[$pos - 1];
         if(isset($runners[$pos + 1])) $place[] = $runners[$pos + 1];
         $places = array_values(array_unique(array_merge($places, $place)));
-        $racetext .= "\t\t'Place'  => '" . implode(", ", $place).  "',\n";
         if($pos == count($runners) - 1){
-            if(!in_array($first, $wps)) $wps[] = $first;
+            $racetext .= "\t\t'WP' => '" . $first .  "',\n";
+        }
+        if($pos == count($runners) - 2){
+            $racetext .= "\t\t'Maybe WP' => '" . $first .  "',\n";
         }
         if($pos < 6){
             $racetext .= "\t\t//In first 6 runners!\n";
         }
-        if(isset($runners[$pos - 8])) {
-            $minus8 = $runners[$pos - 8];
-            if($minus8 == $first && !in_array($minus8, $sures)) $sures[] = $minus8;
-        }
-        if(in_array($last, [11, 12, 13, 14])){
-            if(!in_array($first, $sures2)) $sures2[] = $first;
-        }
     }
+
+    //1. Sort  places by odds
+    $qplsOdds = [];
+    foreach($places as $iIndex){
+        if(isset($allOdds[$raceNumber][$iIndex])) $qplsOdds[$iIndex] = $allOdds[$raceNumber][$iIndex];
+    }
+    asort($qplsOdds);
+    $places = array_keys($qplsOdds);
+    $after4 = array_slice($runners, 3, count($runners) - 3);
+    $places4 = array_intersect($after4, $places);
     if(!empty($places)){
         $racetext .= "\t\t'places' => '" . implode(", ", $places).  "',\n";
     }
-    if(!empty($wps)){
-        $racetext .= "\t\t'WP' => '" . implode(", ", $wps) .  "',\n";
+    if(!empty($places4)){
+        $racetext .= "\t\t'places4' => '" . implode(", ", $places4).  "',\n";
     }
-    if(!empty($sures)){
-        $racetext .= "\t\t'Sure Place' => '" . implode(", ", $sures) .  "',\n";
-    }
-    if(!empty($sures2)){
-        $racetext .= "\t\t'Also Place' => '" . implode(", ", $sures2) .  "',\n";
-    }
+    
     $racetext .= "\t],\n";
     unset($oldPlaces);
     unset($places);
-    unset($oldWPs);
-    unset($wPs);
-    unset($oldSures);
-    unset($sures);
-    unset($oldSures2);
-    unset($sures2);
+    unset($places4);
     $outtext .= $racetext;
 }
 
